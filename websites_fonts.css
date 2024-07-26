@@ -1,0 +1,44 @@
+/* 定義字體 */
+@font-face {
+    font-family:IBMPlexMono-Medium ;
+    src: url(./Fonts/IBMPlexMono-Medium.woff2);
+}
+
+@font-face {
+    font-family:PingFangTC-Medium ;
+    src: url(./Fonts/PingFangTC-Medium.woff2);
+}
+
+@font-face {
+    font-family:PingFangTC-Regular ;
+    src: url(./Fonts/PingFangTC-Regular.woff2);
+}
+
+@font-face {
+    font-family:PingFangTC-Semibold ;
+    src: url(./Fonts/PingFangTC-Semibold.woff2);
+}
+
+@font-face {
+    font-family:TaipeiSansTCBeta-Bold ;
+    src: url(./Fonts/TaipeiSansTCBeta-Bold.ttf);
+}
+
+@font-face {
+    font-family:TaipeiSansTCBeta-Regular ;
+    src: url(./Fonts/TaipeiSansTCBeta-Regular.ttf);
+}
+
+/* 在字體未加載完成前先以系統字體顯示 */
+body{
+    font-display: swap;
+}
+
+/* 設定字體 */
+h1, h2, h3{
+    font-family:IBMPlexMono-Medium ;
+}
+
+p{
+    font-family:PingFangTC-Regular ;
+}
