@@ -1,0 +1,398 @@
+
+/* 定义动画 */
+@keyframes fadeIn {
+    from {
+        max-height:0 ;
+        opacity: 0.5;
+    }
+    to {
+        max-height:100vh ;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes menu-fadeOut {
+    from {
+        max-height: 100vh;
+    }
+    to {
+        max-height: 0vh;
+    }
+}
+
+@keyframes toCross {
+    0% {
+
+    }
+}
+
+/* 隨螢幕變化設定 */
+@media (min-width:100px) {
+    /* 導覽列 */
+    .navbox-normal{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .divright{
+        right: 15px;
+    }
+
+    /* 使電腦版選單隱藏 */
+    .list-desktop-nav-b {
+        display: none;
+    }
+    .desktop-navbutton-box-b {
+        display: none;
+    }
+    /* 使手機版選單顯示 */
+    .navbox_mobile_block-b{
+        display: flex;
+    }
+
+}
+
+@media (min-width:500px) {
+    /* 導覽列 */
+    .navbox-normal ,.message-padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .divright{
+        right: 20px;
+    }
+
+}
+
+@media (min-width:770px) {
+    /* 導覽列 */
+    .navbox-normal {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .divright{
+        right: 30px;
+    }
+
+    /* 使電腦版選單顯示 */
+    .list-desktop-nav-b { 
+        display: block;
+    }
+    .desktop-navbutton-box-b {
+        display: flex;
+    }
+    /* 使手機版選單隱藏 */
+    .navbox_mobile_block-b{
+        display: none;
+    }
+}
+
+@media (min-width:1000px) {
+    /* 導覽列 */
+    .navbox-normal ,.message-padding { 
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .divright{
+        right: 45px;
+    }
+
+}
+
+@media (min-width:1200px) {
+    /* 導覽列 */
+    .navbox-normal ,.message-padding {
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+
+    .divright{
+        right: 110px;
+    }
+
+}
+
+/* 全域元素 */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+button{
+    cursor: pointer;
+}
+
+p{
+    color: #000;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+.button-icon{
+    width: 20px;
+    height: 20px;
+}
+
+/* header 元素 */
+header{
+    display: block;
+    height: 50px;
+    position: fixed;
+    top:0px;
+    width: 100%;
+}
+/* 版本資訊 */
+.messagebox-siteinformation-b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    background-color: #eaeaea;
+}
+
+.messagebox-button-div-b{
+    position: fixed;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#close_messagebox_siteinformation-button{
+    height: auto;
+}
+
+#close_messagebox_siteinformation-button:hover svg{
+    color: #000000;
+}
+
+#svg-of-closemessage{
+    color: #57555585;
+}
+
+#beta_p{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(172, 172, 173);
+    border-radius: 100px;
+    padding: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 0px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+#ver_text{
+    font-size: 14px;
+    margin: 5px;
+    font-family: PingFangTC-Regular;
+}
+
+/* 手機選單開關設定 */
+/* 隐藏元素的初始样式 */
+.list-mobile-div-hidden-b {
+    opacity: 0;
+    display: none;
+    max-height: 0%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 应用动画的类 */
+.list-mobile-div-show-b {
+    position: relative;
+    opacity: 1;
+    display: block;
+    max-height: 100vh;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 隐藏元素的样式 */
+.list-mobile-div-fadeout-b {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+/* 導覽列 */
+
+
+.navbox-close-menu-b{
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    height: 50px;
+    transition: height 0.3s ease-in-out;
+}
+.navbox-open-menu-b{
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    transition: height 0.3s ease;
+    opacity: 1;
+}
+.navbox-fadeout-menu-b{
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.to-mix-nav-b{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#logo-nav-button-div {
+    width: 72px;
+}
+
+.nav-button-b{
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+    height: 50px;
+    width: 35px;
+}
+
+.nav-button-b svg{
+    transition: height 0.1s ease-in-out, width 0.1s ease-in-out;
+}
+
+
+.nav-button-b:hover svg{
+    transition: height 0.1s ease-in-out, width 0.1s ease-in-out;
+    height: 21px;
+    width: 21px;
+}
+
+#logo-button{
+    display: flex;
+    align-items: center;
+}
+
+.igbutton-show{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.igbutton-hidden{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mobile-changemenu-button{
+    padding: 0px;
+}
+
+#mobile-changemenu-button svg{
+    transition: height 0.1s ease-in-out, width 0.1s ease-in-out;
+}
+
+#mobile-changemenu-button:hover svg{
+    transition: height 0.1s ease-in-out, width 0.1s ease-in-out;
+    height: 35px;
+    width: 35px;
+}
+
+.mobile-changemenu-button-path{
+    fill: none;
+    stroke: #000000;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+}
+
+.menuopen #top {
+    transform: rotate(45deg) translateY(-30px) translateX(20px);
+}
+.menuopen #middle {
+    opacity: 0;
+}
+.menuopen #bottom {
+    transform: rotate(-45deg) translateY(-3px) translateX(-48px);
+}
+
+/* 電腦版清單設定 */
+.nav-desktop-ul{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 50px;
+}
+
+.nav-desktop-ul li{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    list-style: none;
+    margin: 20px;
+}
+
+.nav-desktop-ul li a{
+    color: black;
+    text-decoration: none;
+    font-family: TaipeiSansTCBeta-Regular;
+    font-size: 14px;
+}
+/* 手機清單設定 */
+.nav-mobile-ul-hidden{
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 30px;
+}
+
+.nav-mobile-ul-show{
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    margin-top: 30px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 30px;
+}
+
+.nav-mobile-ul-show li{
+    width: 100%;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    margin-top: 25px;
+    margin-left: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav-mobile-ul-hidden li{
+    width: 100%;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    margin-top: 25px;
+    margin-left: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav-mobile-li-a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000000;
+    font-family: PingFangTC-Semibold;
+}
+
