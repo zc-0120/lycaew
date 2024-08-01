@@ -1,0 +1,149 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.headerpolitics{
+    display: block;
+    height: 50px;
+    top:0px;
+    width: 100%;
+}
+
+.introbox{
+    position: sticky;
+    top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#forp{
+    width: 366px;
+    height: 43px;
+    box-sizing: border-box;
+    padding:10px;
+    margin:5px;
+}
+
+.box-nav{
+    display: block;
+    background-color: rgba(241, 240, 240, 0.675);
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+    padding: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.box-nav a{
+    cursor: pointer;
+    background-color: none;
+    color: black;
+    margin: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 100px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.box-nav a:hover{
+    background-color: rgb(198, 198, 198);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.box-nav a.active{
+    background-color: black;
+    color: white;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+.sectionbox{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 90vh;
+}
+
+@media (min-width:100px) {
+    #title-h1{
+        font-size: 35px;
+        transition: font-size 0.3s ease-in-out;
+    }
+    .hastag{
+        font-size: 18px;
+        transition: font-size 0.3s ease-in-out;
+    }
+}
+
+@media (min-width:500px) {
+    #title-h1{
+        font-size: 50px;
+        transition: font-size 0.3s ease-in-out;
+    }
+    .hastag{
+        font-size: 20px;
+        transition: font-size 0.3s ease-in-out;
+    }
+}
+
+@media (min-width:770px) {
+    #title-h1{
+        font-size: 90px;
+        transition: font-size 0.3s ease-in-out;
+    }
+
+    .hastag{
+        font-size: 30px;
+        transition: font-size 0.3s ease-in-out;
+    }
+}
+
+#title-h1{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+
+
+.hastag p{
+    font-family: PingFangTC-Semibold;
+    color: #0393C0;
+}
+
+/* 內容 */
+
+.box{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.boxtitle p{
+    display: block;
+    font-family: PingFangTC-Semibold;
+    font-size: 50px;
+    color: #0393C0;
+    background-color: #0394c021;
+    border-radius: 25px;
+    padding: 20px;
+}
+

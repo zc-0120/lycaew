@@ -131,6 +131,7 @@ body{
 
 button{
     cursor: pointer;
+    color: #000000;
 }
 
 p{
@@ -146,7 +147,7 @@ p{
 }
 
 /* header 元素 */
-header{
+.header{
     display: block;
     height: 50px;
     position: fixed;

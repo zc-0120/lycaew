@@ -55,8 +55,21 @@
 
 
 /* section-1 */
+@media (min-height:100px) {
+    #main_section-1{
+        height: 600px;
+        display: block;
+    }
+}
+
+@media (min-height:550px) {
+    #main_section-1{
+        height: 100vh;
+    }
+}
+
+
 #main_section-1{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,14 +163,18 @@
     padding-left: 20px;
     padding-right: 20px;
     font-size: 17px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #main-section1-button2:hover{
     background-color: rgb(178, 175, 175);
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
+
+#main-blank{
+    height: 50px;
+}
 
 
 .moreunderdiv{
@@ -165,8 +182,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: 40px;
+    margin: 20px;
+    height: 55px;
 }
 
 .moreunderdiv svg{

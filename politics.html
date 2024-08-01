@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="./Header_style.css">
     <link rel="stylesheet" href="./Main_style.css">
     <link rel="stylesheet" href="./websites_fonts.css">
+    <link rel="stylesheet" href="./politics style.css">
 
 </head>
 <body>
-    <header>
+    <header class="headerpolitics">
         <nav class="navbox-close-menu-b navbox-normal" id="navbox">
             <div class="to-mix-nav-b" id="to-mix-nav">
                 <div class="nav-button-div-b" id="logo-nav-button-div">
@@ -74,7 +75,7 @@
                 <div class="list-mobile-nav-b" id="nav-list-mobile">
                     <ul class="nav-mobile-ul-hidden" id="nav-mobile-ul">
                         <li class='nav-mobile-li' id="nav-mobile-li-button_to_home"><a href="https://zc-0120.github.io/lycaew/index" class='nav-mobile-li-a'>首頁</a></li>
-                        <li class='nav-mobile-li' id="nav-mobile-li-button_to_aboutus"><a href="https://zc-0120.github.io/lycaew/adoutus" class='nav-mobile-li-a'>關於我們</a></li>
+                        <li class='nav-mobile-li' id="nav-mobile-li-button_to_aboutus"><a href="https://zc-0120.github.io/lycaew/aboutus" class='nav-mobile-li-a'>關於我們</a></li>
                         <li class='nav-mobile-li' id="nav-mobile-li-button_to_ourpolitics"><a href="https://zc-0120.github.io/lycaew/politics" class='nav-mobile-li-a'>我們的政見</a></li>
                     </ul>
                 </div>
@@ -83,11 +84,46 @@
         </nav>
     </header>
     <main>
-        <div  style="height: 100vh;display: flex;align-items: center;justify-content: center;justify-items: center;flex-direction: column;">
-            <svg class="feather feather-tool" fill="none" height="80" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            <h1>網站建置中</h1>
-            <p style="font-size: 18px;margin: 20px;margin-top: 0px;text-align: center;">感謝你對我們的支持，我們的網站仍在建置中，敬請期待！</p>
-            <a href="https://zc-0120.github.io/lycaew/index" id="back_home" alt="返回首頁" class="back_bome_button" style="padding: 15px;text-decoration: none;color: white;background-color: black;border-radius: 100px;margin-top: 15px;">返回首頁</a>
+        <section id="firstbox" class="sectionbox">
+            <div id="title" class="title">
+                <h1 id="title-h1">我們的政見</h1>
+                <div id="hastag" class="hastag">
+                    <p>#學權</p>
+                    <p>#教育</p>
+                    <p>#娛樂活動</p>
+                    <p>#環境改善</p>
+                </div>
+            </div>
+        </section>
+        <div id="introbox" class="introbox">
+            <div id="box-nav" class="box-nav">
+                <div id="forp">
+                    <a id="button1" href="#ar">學權</a>
+                    <a id="button2" href="#edu">教育</a>
+                    <a id="button3" href="#ea">娛樂活動</a>
+                    <a id="button4" href="#ei">環境改善</a>
+                </div>
+            </div>
+        </div>
+        <div class="box" id='ar'>
+            <div class="boxtitle">
+                <p>學權</p>
+            </div>
+        </div>
+        <div class="box" id="edu">
+            <div class="boxtitle">
+                <p>教育</p>
+            </div>
+        </div>
+        <div class="box" id="ea">
+            <div class="boxtitle">
+                <p>娛樂活動</p>
+            </div>
+        </div>
+        <div class="box" id="ei">
+            <div class="boxtitle">
+                <p>環境改善</p>
+            </div>
         </div>
     </main>
     <footer>
@@ -111,6 +147,6 @@
         <div class="line"></div>
         <p class="copyright-information-p" id="copyright-information-p">Copyright © 2024 zc0120. 保留一切權利。</p>
     </footer>
-    <script src="./script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./p-script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
