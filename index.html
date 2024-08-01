@@ -18,6 +18,13 @@
 
 </head>
 <body>
+    <div class="messagebox-phone show" id="messagebox">
+        <div class="message" id="message">
+            <h1>提醒</h1>
+            <p>您正在使用測試版的網站，使用過程中可能會發生錯誤，造成不便敬請見諒！</p>
+            <button id="closemessage">了解</button>
+        </div>
+    </div>
     <header class="header">
         <div class="messagebox-siteinformation-b message-padding" id="messagebox-siteinformation">
             <p class="text_p-b" id="ver_text" >您正在瀏覽測試版網站 v1.4</p><p class="text_p-b" id="beta_p">BETA</p>
@@ -33,7 +40,7 @@
         <nav class="navbox-close-menu-b navbox-normal" id="navbox">
             <div class="to-mix-nav-b" id="to-mix-nav">
                 <div class="nav-button-div-b" id="logo-nav-button-div">
-                    <button class="nav-button-b" id="logo-button">
+                    <button class="nav-button-b" id="logo-button" onclick="window.open('https://zc-0120.github.io/lycaew/index','_self')">
                         <img src="./icon/website_logo_icon.svg">
                     </button>
                     </span>
@@ -182,5 +189,6 @@
         <p class="copyright-information-p" id="copyright-information-p">Copyright © 2024 zc0120. 保留一切權利。</p>
     </footer>
     <script src="./script.js" type="text/javascript" charset="utf-8"></script>
+    
 </body>
 </html>

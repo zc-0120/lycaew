@@ -5,8 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
     // 檢查LocalStorage中的標記
-    if (localStorage.getItem('messageClosed') === 'true' || window.innerWidth < 770) {
+    if (localStorage.getItem('messageClosed') === 'true' || window.innerWidth < 550) {
         messageboxsiteinformation.style.display = 'none';
+    }
+
+    if (localStorage.getItem('messageClosed') === 'true' || window.innerWidth < 550) {
+        var button = document.getElementById('closemessage')
+        var box = document.getElementById('messagebox')
+        box.classList.remove('show')
+        box.classList.add('hidden')
     }
   
     // 關閉按鈕的點擊事件
@@ -16,6 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('messageClosed', 'true');
     });
 });
+
+document.addEventListener('click', function(){
+    var button = document.getElementById('closemessage')
+    var box = document.getElementById('messagebox')
+    box.classList.remove('show')
+    box.classList.add('hidden')
+    localStorage.setItem('messageClosed', 'true');
+})
 
 function changemenu_open_or_close() {
     var element = document.getElementById('list-mobile-div');
