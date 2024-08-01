@@ -76,7 +76,7 @@ html{
 
 @media (min-width:100px) {
     #title-h1{
-        font-size: 35px;
+        font-size: 45px;
         transition: font-size 0.3s ease-in-out;
     }
     .hastag{
