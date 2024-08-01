@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 document.addEventListener('click', function(){
     var button = document.getElementById('closemessage')
     var box = document.getElementById('messagebox')
