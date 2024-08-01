@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('scroll', () => {
     // 選擇所有的內容區域和導航按鈕
     const boxes = document.querySelectorAll('.box');
     const navButtons = document.querySelectorAll('#box-nav a');
 
     // 創建 IntersectionObserver 實例
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new  IntersectionObserver((entries) => {
         let activeButton = null;
         let maxTop = -Infinity; // 儲存最上方的 `.box` 元素的 `top` 值
 
