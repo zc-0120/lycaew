@@ -1,4 +1,4 @@
-document.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
     // 選擇所有的內容區域和導航按鈕
     const boxes = document.querySelectorAll('.box');
     const navButtons = document.querySelectorAll('#box-nav button');
@@ -6,26 +6,23 @@ document.addEventListener('scroll', () => {
     // 創建 IntersectionObserver 實例
     const observer = new  IntersectionObserver((entries) => {
         let activeButton = null;
-        let maxTop = -Infinity; // 儲存最上方的 `.box` 元素的 `top` 值
 
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const rect = entry.boundingClientRect;
-                if (rect.top > maxTop) { // 如果這個元素更接近視窗頂部
-                    maxTop = rect.top;
-                    const id = entry.target.getAttribute('id');
-                    const buttonNumber = {
-                        ar: 1,
-                        edu: 2,
-                        ea: 3,
-                        ei: 4
-                    }[id];
-                    if (buttonNumber) {
-                        activeButton = document.querySelector(`#button${buttonNumber}`);
-                    }
+                const id = entry.target.getAttribute('id');
+                const buttonNumber = {
+                    ar: 1,
+                    edu: 2,
+                    ea: 3,
+                    ei: 4
+                }[id];
+                if (buttonNumber) {
+                    activeButton = document.querySelector(`#button${buttonNumber}`);
                 }
+
             }
         });
+
 
         // 移除所有按鈕的 active 狀態
         navButtons.forEach(button => button.classList.remove('active'));
@@ -34,6 +31,7 @@ document.addEventListener('scroll', () => {
         if (activeButton) {
             activeButton.classList.add('active');
         }
+        
     }, {
         root: null,       // 使用視窗作為根元素
         rootMargin: '0px',
@@ -126,6 +124,7 @@ const scrollButton = document.getElementById('button5');
 
 window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const box = document.getElementById('box-nav')
 
     if (scrollTop < lastScrollTop) {
         // 向上滚动时显示按钮
@@ -133,9 +132,11 @@ window.addEventListener('scroll', function() {
         setTimeout(() => {
             scrollButton.classList.remove('a')
         }, 100)
+        box.classList.add('active')
         
     } else {
         // 向下滚动时隐藏按钮
+        box.classList.remove('active')
         setTimeout(() => {
             scrollButton.classList.add('a')
         }, 100)
