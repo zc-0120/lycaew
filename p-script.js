@@ -44,18 +44,7 @@ document.addEventListener('scroll', () => {
     boxes.forEach(box => observer.observe(box));
 
 
-    // 获取元素
-    const introbox = document.getElementById('introbox');
-
-    // 获取 introbox 的位置和大小
-    const introrect = introbox.getBoundingClientRect();
-
-    // 检查元素是否在视窗内
-    if (introrect.top == 0 && introrect.bottom <= window.innerHeight) {
-        introbox.classList.add('active');
-    } else if (introbox.classList.contains('active')) {
-        introbox.classList.remove('active');
-    }
+    
 });
 
 function changemenu_open_or_close() {
@@ -155,3 +144,19 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 避免负值
 });
+
+window.addEventListener('scroll', function(){
+    // 获取元素
+    const introbox = document.getElementById('introbox');
+
+    // 获取 introbox 的位置和大小
+    const introrect = introbox.getBoundingClientRect();
+
+    // 检查元素是否在视窗内
+    
+    if (introrect.top == 0 && introrect.bottom <= window.innerHeight) {
+        introbox.classList.add('active');
+    } else if (introbox.classList.contains('active')) {
+        introbox.classList.remove('active');
+    }
+})
