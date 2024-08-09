@@ -154,7 +154,7 @@ window.addEventListener('scroll', function(){
 
     // 检查元素是否在视窗内
     
-    if (introrect.top == 0 && introrect.bottom <= window.innerHeight) {
+    if (introrect.top <= 0) {
         introbox.classList.add('active');
     } else if (introbox.classList.contains('active')) {
         introbox.classList.remove('active');
