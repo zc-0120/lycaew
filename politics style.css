@@ -1,3 +1,13 @@
+/* 圖層設定 */
+.headerpolitics{
+    z-index: 5;
+}
+
+.politicbox{
+    position: relative;
+}
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -8,11 +18,13 @@ html{
     height: 50px;
     top:0px;
     width: 100%;
+    background-color: white;
+    border-bottom:1px solid #cccccc80;
 }
 
 .introbox{
     position: sticky;
-    top: 0px;
+    top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +203,7 @@ html{
 .box{
     margin-top: 30px;
     display: block;
-    z-index: 1;
+    z-index: 0;
 }
 
 .boxtitle{

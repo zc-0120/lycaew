@@ -153,7 +153,7 @@ p{
     position: fixed;
     top:0px;
     width: 100%;
-    z-index: 0;
+    z-index: 5;
 }
 /* 版本資訊 */
 .messagebox-siteinformation-b{
