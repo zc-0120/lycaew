@@ -1,7 +1,7 @@
 document.addEventListener('scroll', () => {
     // 選擇所有的內容區域和導航按鈕
     const boxes = document.querySelectorAll('.box');
-    const navButtons = document.querySelectorAll('#box-nav a');
+    const navButtons = document.querySelectorAll('#box-nav button');
 
     // 創建 IntersectionObserver 實例
     const observer = new  IntersectionObserver((entries) => {
@@ -37,11 +37,25 @@ document.addEventListener('scroll', () => {
     }, {
         root: null,       // 使用視窗作為根元素
         rootMargin: '0px',
-        threshold: 0.6    // 當目標元素的 50% 可見時觸發
+        threshold: 0.3
     });
 
     // 觀察所有內容區域
     boxes.forEach(box => observer.observe(box));
+
+
+    // 获取元素
+    const introbox = document.getElementById('introbox');
+
+    // 获取 introbox 的位置和大小
+    const introrect = introbox.getBoundingClientRect();
+
+    // 检查元素是否在视窗内
+    if (introrect.top == 0 && introrect.bottom <= window.innerHeight) {
+        introbox.classList.add('active');
+    } else if (introbox.classList.contains('active')) {
+        introbox.classList.remove('active');
+    }
 });
 
 function changemenu_open_or_close() {
@@ -109,3 +123,35 @@ checkScreenWidth()
 window.addEventListener('resize', checkScreenWidth);
 window.addEventListener('load', checkScreenWidth);
 
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+    console.log('已按下')
+}
+
+
+let lastScrollTop = 0;
+const scrollButton = document.getElementById('button5');
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop < lastScrollTop) {
+        // 向上滚动时显示按钮
+        scrollButton.classList.remove('hidden')
+        setTimeout(() => {
+            scrollButton.classList.remove('a')
+        }, 100)
+        
+    } else {
+        // 向下滚动时隐藏按钮
+        setTimeout(() => {
+            scrollButton.classList.add('a')
+        }, 100)
+        scrollButton.classList.add('hidden')
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 避免负值
+});

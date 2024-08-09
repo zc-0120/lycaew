@@ -3,7 +3,8 @@ html{
 }
 
 .headerpolitics{
-    display: block;
+    display:block;
+    position: sticky;
     height: 50px;
     top:0px;
     width: 100%;
@@ -11,59 +12,88 @@ html{
 
 .introbox{
     position: sticky;
-    top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-items: center;
     z-index: 1;
+    background-color: white;
+    padding: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+    z-index: 4;
+}
+
+.introbox.active{
+    box-shadow: 0px 5px 10px #cbcbcb81;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 #forp{
-    width: 366px;
-    height: 43px;
+    height: auto;
     box-sizing: border-box;
-    padding:10px;
     margin:5px;
+    display: flex;
+    flex-direction: row;
 }
 
 .box-nav{
     display: block;
-    background-color: rgba(241, 240, 240, 0.675);
+    background-color: rgba(227, 223, 223, 0.547);
     backdrop-filter: blur(10px);
     border-radius: 100px;
     padding: 5px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    transition: width 0.2s ease-in-out;
 }
 
-.box-nav a{
+.box-nav button{
+    padding: 7px;
+    padding-left: 17px;
+    padding-right: 17px;
     cursor: pointer;
-    background-color: none;
+    background-color: #ffffff00;
     color: black;
-    margin: 5px;
-    margin-left: 2px;
-    margin-right: 2px;
     border-radius: 100px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, display 0.2s ease-in-out;
     text-decoration: none;
+    border: 0px;
+    font-family: PingFangTC-Medium;
+    font-size: 18px;
+    visibility: show;
+    opacity: 1;
+    transition:visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
-.box-nav a:hover{
-    background-color: rgb(255, 255, 255);
+.box-nav button:active{
+    background-color: rgb(203, 203, 203);
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.box-nav a.active{
+.box-nav button:hover{
+    background-color: rgb(203, 203, 203);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.box-nav button.active{
     background-color: black;
     color: white;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#button5.a{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#button5.hidden{
+    display: none;
 }
 
 
@@ -84,6 +114,9 @@ html{
         font-size: 18px;
         transition: font-size 0.3s ease-in-out;
     }
+    .text p{
+        font-size: 50px;
+    }
 }
 
 @media (min-width:500px) {
@@ -94,6 +127,9 @@ html{
     .hastag{
         font-size: 20px;
         transition: font-size 0.3s ease-in-out;
+    }
+    .text p{
+        font-size: 70px;
     }
 }
 
@@ -106,6 +142,9 @@ html{
     .hastag{
         font-size: 30px;
         transition: font-size 0.3s ease-in-out;
+    }
+    .text p{
+        font-size: 80px;
     }
 }
 
@@ -135,18 +174,29 @@ html{
 .box{
     margin-top: 30px;
     display: block;
+    z-index: 1;
 }
 
 .boxtitle{
-    
+    border-radius: 20px;
+    margin: 15px;
     background-size:cover ;
     background-position: center;
-    width: 100%;
     height: 400px;
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
+}
+
+.boxtitle::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.286);
+    z-index: 1;
+    position: relative;
+    border-radius: 20px;
 }
 
 /* 背景圖片設定 */
@@ -166,15 +216,26 @@ html{
     background-image: url(./image/ei.jpg);
 }
 
-.boxtitle p{
+.text p{
+    opacity: 1;
     color: rgb(255, 255, 255);
-    background-color: #ffffff8d;
-    backdrop-filter: blur(30px);
-    font-size: 80px;
     display: block;
-    padding: 50px;
-    box-shadow: 10px 10px 50px #80808093;
-    z-index: 0;
     border-radius: 50px;
     font-family: PingFangTC-Semibold;
+    z-index: 1;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.text h6{
+    z-index: 1;
+    color: white;
+    margin: 0px;
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+.text{
+    z-index: 1;
+    position: absolute;
+    text-align: center;
 }
