@@ -221,8 +221,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 內容對象
     const content = {
         ar21: '<h2>政見簡介與說明</h2><p>為了面對未來合作社倒閉的趨勢，我們推出兩大政策來預防學生在學校餓肚子，此政策為第一項政策即<b>爭取外食</b>，實際計畫書可以查閱附件處。</p>',
-        ar22: '<h2>標籤2內容</h2>',
-        ar23: '<h2>標籤3內容</h2>',
+        ar22: '<h2>政見執行方式</h2>',
+        ar23: '<h2>附件</h2><p>目前無任何附件</p>',
     };
 
     function activateButton(button) {
@@ -257,8 +257,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 內容對象
     const content = {
         ar31: '<h2>政見簡介與說明</h2><p>由我們執政的學生會將會更努力於實踐學生自治，這是我們的第一步：設立學生議會，透過設立學生議會來促進會員參與率，另一方面監督學生會工作狀況，更多執行方法可詳看附件處。</p>',
-        ar32: '<h2>標籤2內容</h2>',
-        ar33: '<h2>標籤3內容</h2>',
+        ar32: '<h2>政見執行方式</h2>',
+        ar33: '<h2>附件</h2><p>目前無任何附件</p>',
     };
 
     function activateButton(button) {

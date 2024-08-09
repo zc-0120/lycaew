@@ -302,3 +302,16 @@ html{
     border: 1px solid #ccc;
     padding: 20px;
 }
+.politicbox h1{
+    margin-top: 0px;
+}
+
+.p-h2{
+    display: block;
+    color: white;
+    background-color: #0077ff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
