@@ -32,7 +32,7 @@ html{
 #forp{
     height: auto;
     box-sizing: border-box;
-    margin:5px;
+    margin: 5px;
     display: flex;
     flex-direction: row;
 }
@@ -42,7 +42,6 @@ html{
     background-color: rgba(227, 223, 223, 0.547);
     backdrop-filter: blur(10px);
     border-radius: 100px;
-    padding: 5px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -51,17 +50,17 @@ html{
 
 .box-nav button{
     padding: 7px;
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
     cursor: pointer;
     background-color: #ffffff00;
     color: black;
     border-radius: 100px;
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, display 0.2s ease-in-out;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     text-decoration: none;
     border: 0px;
     font-family: PingFangTC-Medium;
-    font-size: 18px;
+    font-size: 17px;
     visibility: show;
     opacity: 1;
     transition:visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -69,14 +68,10 @@ html{
     justify-content: center;
     justify-items: center;
     align-items: center;
+    margin: 2px;
 }
 
-.box-nav button:active{
-    background-color: rgb(203, 203, 203);
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.box-nav button:hover{
+.box-nav button:hover, .box-nav button:active{
     background-color: rgb(203, 203, 203);
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
@@ -117,6 +112,12 @@ html{
     .text p{
         font-size: 50px;
     }
+    .contentbox{
+        flex-direction:column ;
+    }
+    .politicbox{
+        max-width: auto;
+    }
 }
 
 @media (min-width:500px) {
@@ -130,6 +131,12 @@ html{
     }
     .text p{
         font-size: 70px;
+    }
+    .contentbox{
+        flex-direction:column ;
+    }
+    .politicbox{
+        max-width: auto;
     }
 }
 
@@ -145,6 +152,16 @@ html{
     }
     .text p{
         font-size: 80px;
+    }
+    
+}
+
+@media (min-width:1070px) {
+    .contentbox{
+        flex-direction:row ;
+    }
+    .politicbox{
+        width: 450px;
     }
 }
 
@@ -232,10 +249,56 @@ html{
     margin: 0px;
     margin-top: 5px;
     font-size: 24px;
+    font-family: IBMPlexMono-Medium;
 }
 
 .text{
     z-index: 1;
     position: absolute;
     text-align: center;
+}
+.contentbox{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    flex-direction: row;
+}
+
+.nav-ul li{
+    margin-right: 10px;
+    font-family: IBMPlexMono-Medium;
+}
+
+.nav-ul button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+}
+
+/* 當前激活的標籤的樣式 */
+.nav-ul button.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+#content-container {
+    margin-top: 20px;
+}
+
+.politicbox{
+    margin: 25px;
+    margin-top: 50px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
 }
