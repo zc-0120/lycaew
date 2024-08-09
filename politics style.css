@@ -57,7 +57,8 @@ html{
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    transition: width 0.2s ease-in-out;
+    width: auto;
+    transition: width 0.3s ease-in-out;
 }
 
 .box-nav button{
