@@ -153,10 +153,10 @@ window.addEventListener('scroll', function(){
     const introrect = introbox.getBoundingClientRect();
     const p = this.document.getElementById('introp')
 
-    if (introrect.top <= 0) {
+    if (introrect.top <= 10) {
         introbox.classList.add('active');
         p.classList.add('active')
-    } else if (introbox.classList.contains('active')) {
+    } else if (introbox.classList.contains('active') && p.classList.contains('active') && introrect.top > 0) {
         introbox.classList.remove('active');
         p.classList.remove('active')
     }

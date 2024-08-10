@@ -359,7 +359,6 @@ html{
 }
 
 .nav-ul li{
-    margin-right: 10px;
     font-family: IBMPlexMono-Medium;
 }
 
@@ -367,6 +366,8 @@ html{
     background: none;
     border: none;
     padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     cursor: pointer;
     font-size: 16px;
     position: relative;
@@ -433,22 +434,22 @@ html{
 
 .label1{
     transform: translateX(0px);
-    width: 52px;
+    width: 62px;
     height: 2px;
     transition: transform 0.15s ease-in-out;
 }
 
 .label2{
-    transform: translateX(63px);
+    transform: translateX(62px);
     height: 2px;
     transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
-    width: 82px;
+    width: 94px;
 }
 
 .label3{
     transform: translateX(156px);
     height: 2px;
-    width: 52px;
+    width: 62px;
     transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
 }
 
