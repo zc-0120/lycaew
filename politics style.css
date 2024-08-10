@@ -377,7 +377,6 @@ html{
 }
 
 .nav-ul button:hover{
-    background-color: #cccccc73;
     color: #000000;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
