@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const messageboxsiteinformation = document.getElementById('messagebox-siteinformation');
     const close_messagebox_siteinformationbutton = document.getElementById('close_messagebox_siteinformation-button');
-
+    console.log(localStorage.getItem('messageClosed'))
   
     // 檢查LocalStorage中的標記
     if (localStorage.getItem('messageClosed') === 'true' || window.innerWidth < 550) {
@@ -103,15 +103,4 @@ checkScreenWidth()
 window.addEventListener('resize', checkScreenWidth);
 window.addEventListener('load', checkScreenWidth);
 
-// 監聽整個文檔的點擊事件
-var buttons = document.querySelectorAll('button');
-document.addEventListener('click', function(event) {
-    buttons.forEach(button => {
-        button.blur();
-    });
-});
-
-buttons.document.addEventListener('click', function(event){
-    event.stopPropagation();
-});
 
