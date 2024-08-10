@@ -384,7 +384,6 @@ html{
 
 /* 當前激活的標籤的樣式 */
 .nav-ul button.active {
-    background-color: #cccccc73;
     font-weight: bold;
     color: #000000;
 }
@@ -434,22 +433,22 @@ html{
 
 .label1{
     transform: translateX(0px);
-    width: 62px;
+    width: 6.3ch;
     height: 2px;
     transition: transform 0.15s ease-in-out;
 }
 
 .label2{
-    transform: translateX(62px);
+    transform: translateX(6.4ch);
     height: 2px;
     transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
-    width: 94px;
+    width: 9.7ch;
 }
 
 .label3{
-    transform: translateX(156px);
+    transform: translateX(9.55em);
     height: 2px;
-    width: 62px;
+    width: 6.3ch;
     transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
 }
 
