@@ -463,3 +463,12 @@ p{
     transition: background-color 0.2s ease-in-out;
 }
 
+
+
+/* 底部版本資訊 */
+#ver{
+    font-family: PingFangTC-Regular;
+    color: #9b9b9b;
+    font-size: 13px;
+    margin-top: 5px;
+}

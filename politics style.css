@@ -351,11 +351,11 @@ html{
 
 .nav-ul{
     list-style: none;
-    padding: 0;
-    margin: 15px;
     display: flex;
     border-bottom: 1px solid #ccc;
     flex-direction: row;
+    padding: 0px;
+    margin: 0px;
 }
 
 .nav-ul li{
@@ -366,8 +366,8 @@ html{
     background: none;
     border: none;
     padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     cursor: pointer;
     font-size: 16px;
     position: relative;

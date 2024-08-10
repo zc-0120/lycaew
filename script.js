@@ -1,3 +1,4 @@
+
 // 版本資訊記憶儲存
 document.addEventListener('DOMContentLoaded', function() {
     const messageboxsiteinformation = document.getElementById('messagebox-siteinformation');
@@ -109,3 +110,4 @@ document.addEventListener('click', function(event) {
 buttons.document.addEventListener('click', function(event){
     event.stopPropagation();
 });
+

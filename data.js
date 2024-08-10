@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const buttons1 = document.querySelectorAll('.ar1-contentbtn');
     const buttons2 = document.querySelectorAll('.ar2-contentbtn');
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const underline2 = document.getElementById('underline2');
     const underline3 = document.getElementById('underline3');
+    const containers = document.querySelectorAll('.politicbox')
 
     // 內容對象
     const content = {
@@ -28,42 +30,42 @@ document.addEventListener('DOMContentLoaded', () => {
         label3: 'label3',
     }
 
-    function activateButton(button) {
+    function activateButton(button, container) {
         const contentId = button.getAttribute('data-content');
-        const label = button.getAttribute('label');
         const cclabel = button.getAttribute('cc');
-        const rect = button.getBoundingClientRect();
+        const buttonrect = button.getBoundingClientRect();
+        const containerrect = container.getBoundingClientRect();
         const underline1 = document.getElementById('underline1');
-        console.log(underline1)
-        console.log(rect.width)
-        console.log(rect.right)
+        console.log(buttonrect.left)
+        console.log(containerrect.left)
+
         if (cclabel == 1){
             buttons1.forEach(button => {
                 button.classList.remove('active')
             })
             button.classList.add('active')
-            underline1.style.transform = `translateX(${rect.left - 45}px)`;
-            underline1.style.setProperty('width', `${rect.width}px`);
-            console.log(underline1.style.width)
+            underline1.style.transform = `translateX(${buttonrect.left - containerrect.left}px)`;
+            underline1.style.setProperty('width', `${buttonrect.width}px`);
         }
+
         if (cclabel == 2){
             buttons2.forEach(button => {
                 button.classList.remove('active')
             })
             button.classList.add('active')
-            underline2.style.transform = `translateX(${rect.left - 45}px)`;
-            underline2.style.setProperty('width', `${rect.width}px`);
-            console.log(underline1.style.width)
+            underline2.style.transform = `translateX(${buttonrect.left - containerrect.left}px)`;
+            underline2.style.setProperty('width', `${buttonrect.width}px`);
         }
+
         if (cclabel == 3){
             buttons3.forEach(button => {
                 button.classList.remove('active')
             })
             button.classList.add('active')
-            underline3.style.transform = `translateX(${rect.left - 45}px)`;
-            underline3.style.setProperty('width', `${rect.width}px`);
-            console.log(underline1.style.width)
+            underline3.style.transform = `translateX(${buttonrect.left - containerrect.left}px)`;
+            underline3.style.setProperty('width', `${buttonrect.width}px`);
         }
+       
         updateContent(contentId, button);
     }
 
@@ -79,30 +81,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const firstButton1 = buttons1[0]
-    activateButton(firstButton1);
+    const container1 = containers[0]
+    activateButton(firstButton1,container1);
     const firstButton2 = buttons2[0]
-    activateButton(firstButton2);
+    const container2 = containers[1]
+    activateButton(firstButton2,container2);
     const firstButton3 = buttons3[0]
-    activateButton(firstButton3);
+    const container3 = containers[2]
+    activateButton(firstButton3,container3);
     // 頁面加載時顯示第一個標籤的內容
 
 
     // 為所有按鈕設置點擊事件
     buttons1.forEach(button => {
         button.addEventListener('click', () => {
-            activateButton(button);
+            const container1 = containers[0]
+            activateButton(button, container1);
         });
     });
 
     buttons2.forEach(button => {
         button.addEventListener('click', () => {
-            activateButton(button);
+            const container2 = containers[1]
+            activateButton(button, container2);
         });
     });
 
     buttons3.forEach(button => {
         button.addEventListener('click', () => {
-            activateButton(button);
+            const container3 = containers[2]
+            activateButton(button, container3);
         });
     });
 });
