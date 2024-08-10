@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contentContainer1 = document.getElementById('content-container1');
     const contentContainer2 = document.getElementById('content-container2');
     const contentContainer3 = document.getElementById('content-container3');
-    const underline1 = document.getElementById('underline1');
+
     const underline2 = document.getElementById('underline2');
     const underline3 = document.getElementById('underline3');
 
@@ -32,55 +32,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentId = button.getAttribute('data-content');
         const label = button.getAttribute('label');
         const cclabel = button.getAttribute('cc');
-
+        const rect = button.getBoundingClientRect();
+        const underline1 = document.getElementById('underline1');
+        console.log(underline1)
+        console.log(rect.width)
+        console.log(rect.right)
         if (cclabel == 1){
-            buttons1.forEach(btn => btn.classList.remove('active'));
-            if (underline1.classList.contains('label1')){
-                underline1.classList.remove('label1')
-            }
-            if (underline1.classList.contains('label2')){
-                underline1.classList.remove('label2')                 
-            }
-            if (underline1.classList.contains('label3')){
-                underline1.classList.remove('label3')
-            }
-            
-            button.classList.add('active');
-            underline1.classList.toggle(labels[label])
+            buttons1.forEach(button => {
+                button.classList.remove('active')
+            })
+            button.classList.add('active')
+            underline1.style.transform = `translateX(${rect.left - 45}px)`;
+            underline1.style.setProperty('width', `${rect.width}px`);
+            console.log(underline1.style.width)
         }
-        
         if (cclabel == 2){
-            buttons2.forEach(btn => btn.classList.remove('active'));
-            if (underline2.classList.contains('label1')){
-                underline2.classList.remove('label1')
-            }
-            if (underline2.classList.contains('label2')){
-                underline2.classList.remove('label2')
-                    
-            }
-            if (underline2.classList.contains('label3')){
-                underline2.classList.remove('label3')
-            }
-            button.classList.add('active');
-            underline2.classList.toggle(labels[label])
+            buttons2.forEach(button => {
+                button.classList.remove('active')
+            })
+            button.classList.add('active')
+            underline2.style.transform = `translateX(${rect.left - 45}px)`;
+            underline2.style.setProperty('width', `${rect.width}px`);
+            console.log(underline1.style.width)
         }
-
         if (cclabel == 3){
-            buttons3.forEach(btn => btn.classList.remove('active'));
-            if (underline3.classList.contains('label1')){
-                underline3.classList.remove('label1')
-            }
-            if (underline3.classList.contains('label2')){
-                underline3.classList.remove('label2')
-                    
-            }
-            if (underline3.classList.contains('label3')){
-                underline3.classList.remove('label3')
-            }
-            button.classList.add('active');
-            underline3.classList.toggle(labels[label])
+            buttons3.forEach(button => {
+                button.classList.remove('active')
+            })
+            button.classList.add('active')
+            underline3.style.transform = `translateX(${rect.left - 45}px)`;
+            underline3.style.setProperty('width', `${rect.width}px`);
+            console.log(underline1.style.width)
         }
-
         updateContent(contentId, button);
     }
 

@@ -29,7 +29,7 @@ html{
     justify-content: center;
     justify-items: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 @media (min-width:100px) {
@@ -281,8 +281,8 @@ html{
 
 
 .boxtitle{
-    border-radius: 20px;
-    margin: 15px;
+    border-radius: 25px;
+    margin: 25px;
     background-size:cover ;
     background-position: center;
     height: 400px;
@@ -299,7 +299,7 @@ html{
     background-color: rgba(0, 0, 0, 0.286);
     z-index: 1;
     position: relative;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 /* 背景圖片設定 */
@@ -428,29 +428,10 @@ html{
     height: 2px;
     background-color: black;
     z-index: 2;
-}
-
-.label1{
+    width: var(w, 0px);
     transform: translateX(0px);
-    width: 6.3ch;
-    height: 2px;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
 }
-
-.label2{
-    transform: translateX(6.4ch);
-    height: 2px;
-    transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
-    width: 9.7ch;
-}
-
-.label3{
-    transform: translateX(9.55em);
-    height: 2px;
-    width: 6.3ch;
-    transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
-}
-
 .content-container{
     margin: 20px;
 }
