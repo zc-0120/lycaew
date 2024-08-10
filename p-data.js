@@ -1,122 +1,22 @@
-//ar1
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.ar1-contentbtn');
-    const contentContainer = document.getElementById('content-container1');
-    const underline = document.getElementById('underline1');
+    const buttons1 = document.querySelectorAll('.ar1-contentbtn');
+    const buttons2 = document.querySelectorAll('.ar2-contentbtn');
+    const buttons3 = document.querySelectorAll('.ar3-contentbtn');
+    const contentContainer1 = document.getElementById('content-container1');
+    const contentContainer2 = document.getElementById('content-container2');
+    const contentContainer3 = document.getElementById('content-container3');
+    const underline1 = document.getElementById('underline1');
+    const underline2 = document.getElementById('underline2');
+    const underline3 = document.getElementById('underline3');
 
     // 內容對象
     const content = {
         ar11: '<h2>政見簡介與說明</h2><p>我們發現現在的學校官網不利於行動裝置使用者使用，就算是使用電腦設備，也很難找到自己所需的資訊，因此我們想要建置<b>學生會網站以及LINE官方帳號機器人</b>，透過這些系統，讓學生們可以更容易的接收與查詢自己所需的資料。</p>',
         ar12: '<h2>政見執行方式</h2>',
         ar13: '<h2>附件</h2><p>目前無任何附件</p>',
-        
-    };
-
-    const labels = {
-        label1: 'label1',
-        label2: 'label2',
-        label3: 'label3',
-    }
-
-    function activateButton(button) {
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        const contentId = button.getAttribute('data-content');
-        const label = button.getAttribute('label');
-            if (underline.classList.contains('label1')){
-                underline.classList.remove('label1')
-            }
-            if (underline.classList.contains('label2')){
-                underline.classList.remove('label2')
-                
-            }
-            if (underline.classList.contains('label3')){
-                underline.classList.remove('label3')
-            }
-            underline.classList.toggle(labels[label])
-        updateContent(contentId);
-    }
-
-    function updateContent(contentId) {
-        contentContainer.innerHTML = content[contentId] || '<p>內容未找到。</p>';
-    }
-
-    const firstButton = buttons[0];
-        activateButton(firstButton);
-    // 頁面加載時顯示第一個標籤的內容
-
-
-    // 為所有按鈕設置點擊事件
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            activateButton(button);
-        });
-    });
-});
-
-//ar2
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.ar2-contentbtn');
-    const contentContainer = document.getElementById('content-container2');
-    const underline = document.getElementById('underline2');
-
-    // 內容對象
-    const content = {
         ar21: '<h2>政見簡介與說明</h2><p>為了面對未來合作社倒閉的趨勢，我們推出兩大政策來預防學生在學校餓肚子，此政策為第一項政策即<b>爭取外食</b>，實際計畫書可以查閱附件處。</p>',
         ar22: '<h2>政見執行方式</h2>',
         ar23: '<h2>附件</h2><p>目前無任何附件</p>',
-    };
-
-    const labels = {
-        label1: 'label1',
-        label2: 'label2',
-        label3: 'label3',
-    }
-
-    function activateButton(button) {
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        const contentId = button.getAttribute('data-content');
-        const label = button.getAttribute('label');
-            if (underline.classList.contains('label1')){
-                underline.classList.remove('label1')
-            }
-            if (underline.classList.contains('label2')){
-                underline.classList.remove('label2')
-                
-            }
-            if (underline.classList.contains('label3')){
-                underline.classList.remove('label3')
-            }
-            underline.classList.toggle(labels[label])
-        updateContent(contentId);
-    }
-
-    function updateContent(contentId) {
-        contentContainer.innerHTML = content[contentId] || '<p>內容未找到。</p>';
-    }
-
-    const firstButton = buttons[0];
-        activateButton(firstButton);
-    // 頁面加載時顯示第一個標籤的內容
-
-
-    // 為所有按鈕設置點擊事件
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            activateButton(button);
-        });
-    });
-});
-
-//ar3
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.ar3-contentbtn');
-    const contentContainer = document.getElementById('content-container3');
-    const underline = document.getElementById('underline3');
-
-    // 內容對象
-    const content = {
         ar31: '<h2>政見簡介與說明</h2><p>由我們執政的學生會將會更努力於實踐學生自治，這是我們的第一步：設立學生議會，透過設立學生議會來促進會員參與率，另一方面監督學生會工作狀況，更多執行方法可詳看附件處。</p>',
         ar32: '<h2>政見執行方式</h2>',
         ar33: '<h2>附件</h2><p>目前無任何附件</p>',
@@ -129,37 +29,103 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function activateButton(button) {
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
         const contentId = button.getAttribute('data-content');
         const label = button.getAttribute('label');
-            if (underline.classList.contains('label1')){
-                underline.classList.remove('label1')
+        const cclabel = button.getAttribute('cc');
+        
+        console.log(button)
+        console.log(cclabel)
+
+        if (cclabel == 1){
+            buttons1.forEach(btn => btn.classList.remove('active'));
+            if (underline1.classList.contains('label1')){
+                underline1.classList.remove('label1')
             }
-            if (underline.classList.contains('label2')){
-                underline.classList.remove('label2')
-                
+            if (underline1.classList.contains('label2')){
+                underline1.classList.remove('label2')                 
             }
-            if (underline.classList.contains('label3')){
-                underline.classList.remove('label3')
+            if (underline1.classList.contains('label3')){
+                underline1.classList.remove('label3')
             }
-            underline.classList.toggle(labels[label])
-        updateContent(contentId);
+            
+            button.classList.add('active');
+            underline1.classList.toggle(labels[label])
+        }
+        
+        if (cclabel == 2){
+            buttons2.forEach(btn => btn.classList.remove('active'));
+            if (underline2.classList.contains('label1')){
+                underline2.classList.remove('label1')
+            }
+            if (underline2.classList.contains('label2')){
+                underline2.classList.remove('label2')
+                    
+            }
+            if (underline2.classList.contains('label3')){
+                underline2.classList.remove('label3')
+            }
+            button.classList.add('active');
+            underline2.classList.toggle(labels[label])
+        }
+
+        if (cclabel == 3){
+            buttons3.forEach(btn => btn.classList.remove('active'));
+            if (underline3.classList.contains('label1')){
+                underline3.classList.remove('label1')
+            }
+            if (underline3.classList.contains('label2')){
+                underline3.classList.remove('label2')
+                    
+            }
+            if (underline3.classList.contains('label3')){
+                underline3.classList.remove('label3')
+            }
+            button.classList.add('active');
+            underline3.classList.toggle(labels[label])
+        }
+
+        updateContent(contentId, button);
     }
 
-    function updateContent(contentId) {
-        contentContainer.innerHTML = content[contentId] || '<p>內容未找到。</p>';
+    function updateContent(contentId, button) {
+        const cclabel = button.getAttribute('cc');
+        console.log(cclabel)
+        if (cclabel == 1){
+            contentContainer1.innerHTML = content[contentId] || '<p>內容未找到。</p>';
+            console.log('完成')
+        } else if (cclabel == 2){
+            contentContainer2.innerHTML = content[contentId] || '<p>內容未找到。</p>';
+        } else if (cclabel == 3){
+            contentContainer3.innerHTML = content[contentId] || '<p>內容未找到。</p>';
+        }
     }
 
-    const firstButton = buttons[0];
-        activateButton(firstButton);
+    const firstButton1 = buttons1[0]
+    activateButton(firstButton1);
+    const firstButton2 = buttons2[0]
+    activateButton(firstButton2);
+    const firstButton3 = buttons3[0]
+    activateButton(firstButton3);
     // 頁面加載時顯示第一個標籤的內容
 
 
     // 為所有按鈕設置點擊事件
-    buttons.forEach(button => {
+    buttons1.forEach(button => {
+        button.addEventListener('click', () => {
+            activateButton(button);
+        });
+    });
+
+    buttons2.forEach(button => {
+        button.addEventListener('click', () => {
+            activateButton(button);
+        });
+    });
+
+    buttons3.forEach(button => {
         button.addEventListener('click', () => {
             activateButton(button);
         });
     });
 });
+
