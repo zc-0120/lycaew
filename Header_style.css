@@ -149,7 +149,8 @@ p{
 /* header 元素 */
 body.overflow{
     overflow: hidden;
-    -webkit-overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: auto;
 }
 
 .header{
