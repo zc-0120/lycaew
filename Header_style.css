@@ -151,6 +151,7 @@ body.overflow{
     overflow: hidden;
     touch-action: none;
     -webkit-overflow-scrolling: auto;
+    position: fixed;
 }
 
 .header{
