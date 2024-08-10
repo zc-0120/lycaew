@@ -42,6 +42,7 @@ function changemenu_open_or_close() {
     var element2 = document.getElementById('nav-mobile-ul');
     var igbutton = document.getElementById('mobile-link_to_ig-nav-button-div')
     const path = document.getElementById("menubuttonIcon");
+    const body = document.querySelector('body')
 
     if (element.classList.contains('list-mobile-div-hidden-b')) {
         classname.classList.remove('navbox-close-menu-b');
@@ -54,6 +55,8 @@ function changemenu_open_or_close() {
             element2.classList.remove('nav-mobile-ul-hidden');
             element2.classList.add('nav-mobile-ul-show');
         },200)
+        body.classList.add('overflow')
+        console.log('完成')
         
     } else {
         element2.classList.remove('nav-mobile-ul-show');
@@ -66,7 +69,8 @@ function changemenu_open_or_close() {
         },200)
         igbutton.classList.remove('igbutton-hidden')
         igbutton.classList.add('igbutton-show')
-        
+        body.classList.remove('overflow')
+        console.log('完成')
     }
 }
 

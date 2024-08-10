@@ -147,6 +147,10 @@ p{
 }
 
 /* header 元素 */
+body.overflow{
+    overflow: hidden;
+}
+
 .header{
     display: block;
     height: 50px;
