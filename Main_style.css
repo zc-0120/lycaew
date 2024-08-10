@@ -141,17 +141,22 @@
     background-color: black;
     color: #ffffff;
     border-radius: 100px;
-    border: 0px;
     padding: 15px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 17px;
-    transition: background-color 0.1s ease-in-out;
+    border: none;
 }
 
 .main-section1-button:hover{
     background-color: rgba(0, 0, 0, 0.771);
     transition: background-color 0.1s ease-in-out;
+}
+
+.main-section1-button:focus{
+    outline: 1px solid #0393C0;
+    outline-offset: 6px;
+    transition: outline-offset 0.2s ease-in-out;
 }
 
 #main-section1-button2{
@@ -164,11 +169,18 @@
     padding-right: 20px;
     font-size: 17px;
     transition: background-color 0.2s ease-in-out;
+
 }
 
 #main-section1-button2:hover{
     background-color: rgb(178, 175, 175);
     transition: background-color 0.2s ease-in-out;
+}
+
+#main-section1-button2:focus{
+    outline: 1px solid #0393C0;
+    outline-offset: 6px;
+    transition: outline-offset 0.2s ease-in-out;
 }
 
 

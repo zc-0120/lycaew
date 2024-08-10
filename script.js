@@ -98,3 +98,14 @@ checkScreenWidth()
 window.addEventListener('resize', checkScreenWidth);
 window.addEventListener('load', checkScreenWidth);
 
+// 監聽整個文檔的點擊事件
+var buttons = document.querySelectorAll('button');
+document.addEventListener('click', function(event) {
+    buttons.forEach(button => {
+        button.blur();
+    });
+});
+
+buttons.document.addEventListener('click', function(event){
+    event.stopPropagation();
+});
