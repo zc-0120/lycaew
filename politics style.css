@@ -10,6 +10,8 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .headerpolitics{
@@ -22,92 +24,6 @@ html{
     border-bottom:1px solid #cccccc80;
 }
 
-.introbox{
-    position: sticky;
-    top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    z-index: 1;
-    background-color: white;
-    padding: 10px;
-    transition: box-shadow 0.2s ease-in-out;
-    z-index: 4;
-}
-
-.introbox.active{
-    box-shadow: 0px 5px 10px #cbcbcb81;
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-#forp{
-    height: auto;
-    box-sizing: border-box;
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-}
-
-.box-nav{
-    display: block;
-    background-color: rgba(227, 223, 223, 0.547);
-    backdrop-filter: blur(10px);
-    border-radius: 100px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width: 326.97px;
-    transition: width 0.2s ease-in-out;
-}
-
-.box-nav.active{
-    width: 378.97px;
-    transition: width 0.2s ease-in-out;
-}
-
-.box-nav button{
-    padding: 7px;
-    padding-left: 15px;
-    padding-right: 15px;
-    cursor: pointer;
-    background-color: #ffffff00;
-    color: black;
-    border-radius: 100px;
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-    text-decoration: none;
-    border: 0px;
-    font-family: PingFangTC-Medium;
-    font-size: 17px;
-    visibility: show;
-    opacity: 1;
-    transition:visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin: 2px;
-}
-
-.box-nav button:hover, .box-nav button:active{
-    background-color: rgb(203, 203, 203);
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.box-nav button.active{
-    background-color: black;
-    color: white;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-#button5.a{
-    visibility: hidden;
-    opacity: 0;
-}
-
-#button5.hidden{
-    display: none;
-}
 
 
 .sectionbox{
@@ -195,7 +111,9 @@ html{
     flex-direction: column;
 }
 
-
+.hastag{
+    margin-bottom: 10px;
+}
 
 .hastag p{
     font-family: PingFangTC-Semibold;
@@ -203,6 +121,126 @@ html{
 }
 
 /* 內容 */
+.introbox{
+    position: sticky;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+    z-index: 4;
+}
+
+.introbox.active{
+    box-shadow: 0px 5px 10px #cbcbcb81;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#forp{
+    height: auto;
+    box-sizing: border-box;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.box-nav{
+    display: block;
+    background-color: rgba(227, 223, 223, 0.547);
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+
+.box-nav button{
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: black;
+    border-radius: 100px;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    text-decoration: none;
+    border: 0px;
+    font-family: PingFangTC-Medium;
+    font-size: 14px;
+    visibility: show;
+    opacity: 1;
+    transition:visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 2px;
+}
+
+@media (min-width:100px) {
+    .box-nav button{
+        font-size: 15px;
+    }
+    .box-nav svg{
+        width: 14px;
+        height: 14px;
+    }
+    .box-nav{
+        width: 305.48px;
+        transition: width 0.2s ease-in-out;
+    }
+
+    .box-nav.active{
+        width: 352.48px;
+        transition: width 0.2s ease-in-out;
+    }
+}
+
+@media (min-width:770px) {
+    .box-nav button{
+        font-size: 17px;
+    }
+
+    .box-nav svg{
+        width: 18px;
+        height: 18px;
+    }
+
+    .box-nav{
+        width: 326.97px;
+        transition: width 0.2s ease-in-out;
+    }
+
+    .box-nav.active{
+        width: 378.97px;
+        transition: width 0.2s ease-in-out;
+    }
+}
+
+.box-nav button:hover, .box-nav button:active{
+    background-color: rgb(203, 203, 203);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.box-nav button.active{
+    background-color: black;
+    color: white;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#button5.a{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#button5.hidden{
+    display: none;
+}
 
 
 
@@ -306,7 +344,6 @@ html{
 /* 當前激活的標籤的樣式 */
 .nav-ul button.active {
     font-weight: bold;
-    border-bottom: 2px solid black;
 }
 
 #content-container {
@@ -332,4 +369,33 @@ html{
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+/* 底線樣式 */
+.underline {
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    z-index: 3;
+}
+
+.label1{
+    transform: translateX(0px);
+    width: 50px;
+    height: 2px;
+    transition: transform 0.15s ease-in-out;
+}
+
+.label2{
+    transform: translateX(63px);
+    height: 2px;
+    transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
+    width: 82px;
+}
+
+.label3{
+    transform: translateX(157px);
+    height: 2px;
+    width: 50px;
+    transition: transform 0.15s ease-in-out, width 0.15s ease-in-out;
 }

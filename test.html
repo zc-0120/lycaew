@@ -34,13 +34,25 @@
 
         /* 底線樣式 */
         .underline {
-            position: absolute;
-            bottom: -2px;
+            position: relative;
             height: 2px;
             background-color: black;
-            transition: transform 0.3s ease, width 0.3s ease;
-            width: 0;
-            transform: translateX(0);
+            width: 10;
+        }
+
+        .underline.label1{
+            transform: translateX(0px);
+            transition: transform 0.15s ease-in-out;
+        }
+
+        .underline.label2{
+            transform: translateX(71px);
+            transition: transform 0.15s ease-in-out;
+        }
+
+        .underline.label3{
+            transform: translateX(142px);
+            transition: transform 0.15s ease-in-out;
         }
 
         #content-container {
@@ -52,12 +64,15 @@
 
 <nav>
     <ul>
-        <li><button class="tab-button" data-content="content1">標籤1</button></li>
-        <li><button class="tab-button" data-content="content2">標籤2</button></li>
-        <li><button class="tab-button" data-content="content3">標籤3</button></li>
+        <li>
+            <button class="tab-button" data-content="content1" label="label1">標籤1</button>
+            <div class="underline"></div>
+        </li>
+        <li><button class="tab-button" data-content="content2" label="label2">標籤2</button></li>
+        <li><button class="tab-button" data-content="content3" label="label3">標籤3</button></li>
     </ul>
     <!-- 底線 -->
-    <div class="underline"></div>
+    
 </nav>
 
 <div id="content-container">
@@ -77,24 +92,35 @@
             content3: '<h2>標籤3內容</h2><p>這裡是標籤3的詳細內容。</p>'
         };
 
+        const labels = {
+            label1: 'label1',
+            label2: 'label2',
+            label3: 'label3',
+        }
+
         function activateButton(button) {
             buttons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             const contentId = button.getAttribute('data-content');
+            const label = button.getAttribute('label');
+            if (underline.classList.contains('label1')){
+                underline.classList.remove('label1')
+            }
+            if (underline.classList.contains('label2')){
+                underline.classList.remove('label2')
+                
+            }
+            if (underline.classList.contains('label3')){
+                underline.classList.remove('label3')
+            }
+            underline.classList.toggle(labels[label])
             updateContent(contentId);
-            moveUnderline(button);
         }
 
         function updateContent(contentId) {
             contentContainer.innerHTML = content[contentId] || '<p>內容未找到。</p>';
         }
 
-        function moveUnderline(button) {
-            const buttonRect = button.getBoundingClientRect();
-            const navRect = button.parentElement.parentElement.getBoundingClientRect();
-            underline.style.width = `${buttonRect.width}px`;
-            underline.style.transform = `translateX(${buttonRect.left - navRect.left}px)`;
-        }
 
         // 頁面加載時顯示第一個標籤的內容
         if (buttons.length > 0) {
