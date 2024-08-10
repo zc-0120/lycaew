@@ -146,34 +146,18 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 避免负值
 });
 
+
 window.addEventListener('scroll', function(){
     // 获取元素
     const introbox = document.getElementById('introbox');
-
-    // 获取 introbox 的位置和大小
     const introrect = introbox.getBoundingClientRect();
+    const p = this.document.getElementById('introp')
 
-    // 检查元素是否在视窗内
-    
     if (introrect.top <= 0) {
         introbox.classList.add('active');
+        p.classList.add('active')
     } else if (introbox.classList.contains('active')) {
         introbox.classList.remove('active');
-    }
-})
-
-window.addEventListener('load', function(){
-    // 获取元素
-    const introbox = document.getElementById('introbox');
-
-    // 获取 introbox 的位置和大小
-    const introrect = introbox.getBoundingClientRect();
-
-    // 检查元素是否在视窗内
-    
-    if (introrect.top <= 0) {
-        introbox.classList.add('active');
-    } else if (introbox.classList.contains('active') && introbox.classList.contains('active')) {
-        introbox.classList.remove('active');
+        p.classList.remove('active')
     }
 })

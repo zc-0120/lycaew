@@ -32,9 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentId = button.getAttribute('data-content');
         const label = button.getAttribute('label');
         const cclabel = button.getAttribute('cc');
-        
-        console.log(button)
-        console.log(cclabel)
 
         if (cclabel == 1){
             buttons1.forEach(btn => btn.classList.remove('active'));
@@ -89,10 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateContent(contentId, button) {
         const cclabel = button.getAttribute('cc');
-        console.log(cclabel)
         if (cclabel == 1){
             contentContainer1.innerHTML = content[contentId] || '<p>內容未找到。</p>';
-            console.log('完成')
         } else if (cclabel == 2){
             contentContainer2.innerHTML = content[contentId] || '<p>內容未找到。</p>';
         } else if (cclabel == 3){
