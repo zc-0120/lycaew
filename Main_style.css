@@ -109,6 +109,8 @@
 
 .text-welcome-div{
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width:100px) {
@@ -161,12 +163,29 @@
 
 }
 
+.betabox{
+    display: flex;
+    justify-content: center;
+}
+
+#betatext{
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    background-color:#9606c216;
+    color: #ad2fd4;
+    font-family: IBMPlexMono-Medium;
+    font-size: 14px;
+}
+
 .main-section1-button-div{
-    margin: 5px;
+    margin: 0px;
 }
 
 .main-section1-button{
-    margin: 5px;
     background-color: black;
     color: #ffffff;
     border-radius: 100px;
@@ -175,6 +194,7 @@
     padding-right: 23px;
     font-size: 16px;
     border: none;
+    margin: 0px;
 }
 
 .main-section1-button:hover{
@@ -189,16 +209,35 @@
 }
 
 #main-section1-button2{
-    background-color: rgba(224, 224, 224, 0.518);
-    color: #000000;
+    background-color: transparent;
+    color: #717171;
     border-radius: 100px;
     transition: background-color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
 
+#main-section1-button2 svg{
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    
+}
+
+#main-section1-button2 svg line, #main-section1-button2 svg polyline{
+    stroke: #717171;
 }
 
 #main-section1-button2:hover{
-    background-color: rgb(178, 175, 175);
+    color: rgb(0, 0, 0);
     transition: background-color 0.2s ease-in-out;
+}
+
+#main-section1-button2:hover svg line, #main-section1-button2:hover svg polyline{
+    stroke: rgb(0, 0, 0);
+    transition: stroke 0.2s ease-in-out;
 }
 
 #main-section1-button2:focus{
