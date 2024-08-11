@@ -127,12 +127,6 @@
 * {
     box-sizing: border-box; /* 确保所有元素的宽度包含内边距和边框 */
 }
-html, body {
-    overflow-x: hidden; /* 禁止水平滚动 */
-    margin: 0; /* 清除默认的外边距 */
-    padding: 0;
-    width: 100%; /* 确保 body 占满整个视口 */
-}
 
 
 body{
