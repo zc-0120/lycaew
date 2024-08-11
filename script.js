@@ -103,4 +103,25 @@ checkScreenWidth()
 window.addEventListener('resize', checkScreenWidth);
 window.addEventListener('load', checkScreenWidth);
 
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+    console.log('已按下')
+}
 
+
+document.addEventListener('scroll', function(){
+    const box2 = document.getElementById('main_section-2')
+    const header = document.getElementById('navbox')
+    const rect = box2.getBoundingClientRect()
+    console.log(window.innerHeight)
+    console.log(rect.top)
+    if (rect.top < window.innerHeight) {
+        header.classList.add('active')
+        console.log('完成')
+    } else {
+        header.classList.remove('active')
+    }
+})

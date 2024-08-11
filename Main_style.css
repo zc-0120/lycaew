@@ -60,11 +60,23 @@
         height: 600px;
         display: block;
     }
+
+    .moreunderdiv{
+        position: relative;
+        bottom: 0px;
+        z-index: 3;
+    }
 }
 
 @media (min-height:550px) {
     #main_section-1{
         height: 100vh;
+    }
+
+    .moreunderdiv{
+        position: absolute;
+        bottom: 0px;
+        z-index: 3;
     }
 }
 
@@ -77,13 +89,20 @@
     justify-content: center;
 }
 
+#main_section-1 video{
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+}
+
 .section1-textandbutton{
     display: flex;
     flex-direction: column;
     justify-items: center;
     justify-content: center;
     align-items: center;
-    flex-grow: 1 ;
 }
 
 .text-welcome-div{
@@ -106,30 +125,38 @@
         font-size: 65px;
         transition: font-size 0.2s ease-in-out;
     }
-    .text-welcome-div h3{
+    .text-welcome-div p{
         font-size: 18px;
         transition: font-size 0.2s ease-in-out;
+        padding: 10px;
     }
+    
 }
 
 @media (min-width:770px) {
     .text-welcome-div h1{
-        font-size: 100px;
+        font-size: 80px;
         transition: font-size 0.2s ease-in-out;
     }
-    .text-welcome-div h3{
+    .text-welcome-div p{
         font-size: 18px;
         transition: font-size 0.2s ease-in-out;
+        padding: 10px;
     }
+
+    
 }
 .text-welcome-div h1{
-    margin: 0px;
+    margin: 0;
 }
 
-.text-welcome-div h3{
-    margin: 0px;
-    color: #0393C0;
+.text-welcome-div p{
+    margin: 15px;
+    color: #626161;
     letter-spacing: 2px;
+    font-family: IBMPlexMono-Regular;
+    display: block;
+
 }
 
 .main-section1-button-div{
@@ -141,10 +168,10 @@
     background-color: black;
     color: #ffffff;
     border-radius: 100px;
-    padding: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 17px;
+    padding: 12px;
+    padding-left: 23px;
+    padding-right: 23px;
+    font-size: 16px;
     border: none;
 }
 
@@ -160,14 +187,9 @@
 }
 
 #main-section1-button2{
-    background-color: rgb(224, 224, 224);
+    background-color: rgba(224, 224, 224, 0.518);
     color: #000000;
     border-radius: 100px;
-    border: 0px;
-    padding: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 17px;
     transition: background-color 0.2s ease-in-out;
 
 }
@@ -194,8 +216,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    height: 55px;
+    margin: 0px;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, white);
+    padding: 25px;
 }
 
 .moreunderdiv svg{
@@ -205,6 +229,21 @@
 
 .moretext{
     color: rgba(0, 0, 0, 0.302);
+    margin: 10px;
+}
+
+.morebtn{
+    background-color: transparent;
+    border: 0px;
+}
+.morebtn svg{
+    color: #cccaca;
+    transition: color 0.2s ease-in-out;
+}
+
+.morebtn:hover svg{
+    color: #686868;
+    transition: color 0.2s ease-in-out;
 }
 
 /* section-2 */

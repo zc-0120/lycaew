@@ -127,6 +127,23 @@ html{
     color: #0393C0;
 }
 
+.pbtn{
+    display: flex;
+    justify-content: center;
+}
+
+.pbtn svg{
+    height: 18px;
+    width: 18px;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 2px;
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
 /* 內容 */
 .introbox{
     position: sticky;
@@ -216,11 +233,6 @@ html{
         width: 305.48px;
         transition: width 0.2s ease-in-out;
     }
-
-    .box-nav.active{
-        width: 352.48px;
-        transition: width 0.2s ease-in-out;
-    }
 }
 
 @media (min-width:770px) {
@@ -238,10 +250,6 @@ html{
         transition: width 0.2s ease-in-out;
     }
 
-    .box-nav.active{
-        width: 378.97px;
-        transition: width 0.2s ease-in-out;
-    }
 }
 
 .box-nav button:hover, .box-nav button:active{
@@ -255,13 +263,39 @@ html{
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-#button5.a{
-    visibility: hidden;
+#button5.fadein{
     opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 #button5.hidden{
     display: none;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#button5.active{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px #ccc;
+    border: 0px;
+    border-radius: 100px;
+    padding: 10px;
+    z-index: 4;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#button5:hover{
+    background-color: #d2d3d4;
+    transition: background-color 0.2s ease-in-out;
 }
 
 

@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family:IBMPlexMono-Regular ;
+    src: url(./Fonts/IBMPlexSans-Regular.woff2);
+}
+
+@font-face {
     font-family:PingFangTC-Medium ;
     src: url(./Fonts/PingFangTC-Medium.woff2);
 }

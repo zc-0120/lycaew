@@ -45,84 +45,6 @@ window.addEventListener('scroll', () => {
     
 });
 
-function changemenu_open_or_close() {
-    var element = document.getElementById('list-mobile-div');
-    var button = document.getElementById('mobile-changemenu-button');
-    var icon = document.getElementById('menubuttonIcon');
-    var classname = document.getElementById('navbox');
-    var element2 = document.getElementById('nav-mobile-ul');
-    var igbutton = document.getElementById('mobile-link_to_ig-nav-button-div')
-    const path = document.getElementById("menubuttonIcon");
-    const body = document.querySelector('body')
-
-    if (element.classList.contains('list-mobile-div-hidden-b')) {
-        classname.classList.remove('navbox-close-menu-b');
-        element.classList.remove('list-mobile-div-hidden-b');
-        element.classList.add('list-mobile-div-show-b');
-        classname.classList.add('navbox-open-menu-b');
-        igbutton.classList.remove('igbutton-show')
-        igbutton.classList.add('igbutton-hidden')
-        setTimeout(function(){
-            element2.classList.remove('nav-mobile-ul-hidden');
-            element2.classList.add('nav-mobile-ul-show');
-        },200)
-        body.classList.add('overflow')
-        console.log('完成')
-        
-    } else {
-        element2.classList.remove('nav-mobile-ul-show');
-        element2.classList.add('nav-mobile-ul-hidden');
-        setTimeout(function(){
-            element.classList.remove('list-mobile-div-show-b');
-            classname.classList.remove('navbox-open-menu-b');
-            element.classList.add('list-mobile-div-hidden-b');
-            classname.classList.add('navbox-close-menu-b');    
-        },200)
-        igbutton.classList.remove('igbutton-hidden')
-        igbutton.classList.add('igbutton-show')
-        body.classList.remove('overflow')
-        console.log('完成')
-    }
-}
-
-let isMenuOpen = false;
-function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-    const menusvg = document.getElementById('menusvg');
-    menusvg.classList.toggle('menuopen');
-  
-}
-
-function checkScreenWidth(){
-    const element = document.getElementById('navbox')
-    const element2 = document.getElementById('list-mobile-div')
-    const menusvg = document.getElementById('menusvg');
-    const messageboxsiteinformation = document.getElementById('messagebox-siteinformation');
-
-
-    if (window.innerWidth > 770 && element.classList.contains('navbox-open-menu-b'))  {
-        element.classList.remove('navbox-open-menu-b')
-        element.classList.add('navbox-hidden-menu-b')
-        element2.classList.remove('list-mobile-div-show-b')
-        element2.classList.add('list-mobile-div-hidden-b')
-        menusvg.classList.remove('menuopen');
-    }
-
-}
-
-checkScreenWidth()
-window.addEventListener('resize', checkScreenWidth);
-window.addEventListener('load', checkScreenWidth);
-
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-    console.log('已按下')
-}
-
-
 let lastScrollTop = 0;
 const scrollButton = document.getElementById('button5');
 
@@ -133,18 +55,19 @@ window.addEventListener('scroll', function() {
     if (scrollTop < lastScrollTop) {
         // 向上滚动时显示按钮
         scrollButton.classList.remove('hidden')
+        scrollButton.classList.remove('fadein')
         setTimeout(() => {
-            scrollButton.classList.remove('a')
-        }, 100)
-        box.classList.add('active')
+            scrollButton.classList.add('active')
+        }, 200)
         
     } else {
         // 向下滚动时隐藏按钮
-        box.classList.remove('active')
+        scrollButton.classList.add('fadein')
         setTimeout(() => {
-            scrollButton.classList.add('a')
-        }, 100)
-        scrollButton.classList.add('hidden')
+            scrollButton.classList.remove('active')
+            scrollButton.classList.add('hidden')
+        }, 200)
+        
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 避免负值
