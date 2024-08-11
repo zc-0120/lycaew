@@ -250,7 +250,7 @@ body.overflow{
     background-color: transparent;
     height: 50px;
     transition: height 0.3s ease-in-out;
-    z-index: 5;
+    z-index: 10;
     transition: background-color 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
@@ -266,7 +266,7 @@ body.overflow{
     transition: height 0.3s ease, background-color 0.2s ease-in-out;
     opacity: 1;
     overflow: hidden;
-    z-index: 5;
+    z-index: 10;
 }
 .fadeout-menu-b{
     background-color: rgba(255, 255, 255, 0.8);

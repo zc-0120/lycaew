@@ -19,6 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ar21: '<h2>政見簡介與說明</h2><p>為了面對未來合作社倒閉的趨勢，我們推出兩大政策來預防學生在學校餓肚子，此政策為第一項政策即<b>爭取外食</b>，實際計畫書可以查閱附件處。</p>',
         ar22: '<h2>政見執行方式</h2>',
         ar23: '<h2>附件</h2><p>目前無任何附件</p>',
+        ar24: ` <h1>加入參與名單</h1>
+                <form id="emailForm"  autocomplete="off">
+                    <div class='emailinput' id='nameinput'>
+                        <label for="name" class='inputlabel' id='name-inputlabel'>姓名</label>
+                        <input class='input' type="string" id="name" name="name" required>
+                        <span class='line' id='line1'></span>
+                    </div>
+                    <div class='emailinput' id='emailinput'>
+                        <label for="email" class='inputlabel' id='inputlabel'>電子郵件 (Email)</label>
+                        <input class='input' type="email" id="email" name="email" required>
+                        <span class='line' id='line'></span>
+                    </div>
+                    <button type="button" onclick="saveEmail()" class='savebtn'>提交</button>
+                </form>`,
         ar31: '<h2>政見簡介與說明</h2><p>由我們執政的學生會將會更努力於實踐學生自治，這是我們的第一步：設立學生議會，透過設立學生議會來促進會員參與率，另一方面監督學生會工作狀況，更多執行方法可詳看附件處。</p>',
         ar32: '<h2>政見執行方式</h2>',
         ar33: '<h2>附件</h2><p>目前無任何附件</p>',

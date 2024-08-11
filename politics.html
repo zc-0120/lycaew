@@ -21,6 +21,17 @@
 </head>
 <body>
     <header id="headerpolitics">
+        <div class="messagebox-siteinformation-b message-padding" id="messagebox-siteinformation">
+            <p class="text_p-b" id="ver_text" >您正在瀏覽測試版網站 v1.4</p><p class="text_p-b" id="beta_p">BETA</p>
+            <div class="messagebox-button-div-b divright">
+                <button class="nav-button-b" id="close_messagebox_siteinformation-button">
+                    <svg class="button-icon" id='svg-of-closemessage'fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" x2="6" y1="6" y2="18"/>
+                        <line x1="6" x2="18" y1="6" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
         <nav class="navbox-close-menu-b navbox-normal" id="navbox">
             <div class="to-mix-nav-b" id="to-mix-nav">
                 <div class="nav-button-div-b" id="logo-nav-button-div">
@@ -157,6 +168,7 @@
                                 </li>
                                 <li><button data-content="ar22" class="ar2-contentbtn" label="label2" cc="2">執行方式</button></li>
                                 <li><button data-content="ar23" class="ar2-contentbtn" label="label3" cc="2">附件</button></li>
+                                <li><button data-content="ar24" class="ar2-contentbtn" label="label3" cc="2">研討會</button></li>
                                 
                             </ul>
                         </nav>
@@ -246,6 +258,49 @@
     </footer>
     <script src="./script.js" type="text/javascript" charset="utf-8"></script>
     <script src="./p-script.js" type="text/javascript" charset="utf-8"></script>
+    <script type="module">
+        // 导入所需的 Firebase 功能
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+        // Firebase 配置
+        const firebaseConfig = {
+            apiKey: "AIzaSyDC2roWfUt5Bv3ySiVPjUSXUxOwCZFOHFU",
+            authDomain: "lycaew.firebaseapp.com",
+            projectId: "lycaew",
+        };
+
+        // 初始化 Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 保存电子邮件到 Realtime Database
+        window.saveEmail = async function() {
+            const email = document.getElementById('email');
+            const name = document.getElementById('name');
+            const label2 = document.getElementById('name-inputlabel');
+            const label = document.getElementById('inputlabel');
+            if (email.value == '' || name.value == ''){
+                alert("有訊息未填完");
+            } else {
+                try {
+                    const docRef = await addDoc(collection(db, "list"), {
+                        姓名: name.value,
+                        電子郵件: email.value,
+                        提交時間: new Date()
+                    });
+                    alert("提交成功");
+                    name.value = ''
+                    email.value = ''
+                    label2.classList.remove('active')
+                    label.classList.remove('active')
+                } catch (e) {
+                console.error("Error adding document: ", e);
+                }
+            }
+            
+        };
+    </script>
 
 </body>
 </html>

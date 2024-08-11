@@ -88,3 +88,39 @@ window.addEventListener('scroll', function(){
         p.classList.remove('active')
     }
 })
+
+window.addEventListener('click', function(){
+    const inputField = document.getElementById('email');
+    const label = document.getElementById('inputlabel');
+    const container = document.querySelector('.emailinput');
+    const line = document.getElementById('line')
+
+    inputField.addEventListener('focus', function() {
+        label.classList.add('active')
+        line.classList.add('active')
+    });
+
+    inputField.addEventListener('blur', function() {
+        if (inputField.value.trim() === ""){
+            label.classList.remove('active')
+        }
+        line.classList.remove('active')
+    });
+
+    const inputField2 = document.getElementById('name');
+    const label2 = document.getElementById('name-inputlabel');
+    const container2 = document.querySelector('.emailinput');
+    const line2 = document.getElementById('line1')
+
+    inputField2.addEventListener('focus', function() {
+        label2.classList.add('active')
+        line2.classList.add('active')
+    });
+
+    inputField2.addEventListener('blur', function() {
+        if (inputField2.value.trim() === ""){
+            label2.classList.remove('active')
+        }
+        line2.classList.remove('active')
+    });
+})

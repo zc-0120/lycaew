@@ -1,3 +1,7 @@
+.input:-webkit-autofill, .input:-moz-autofill, .input:-ms-autofill {
+    background-color: #00000000;
+}
+
 /* 圖層設定 */
 
 .politicbox{
@@ -17,11 +21,8 @@ html{
     top:0px;
     width: 100%;
     background-color: white;
-    border-bottom:1px solid #cccccc80;
-    z-index: 5;
+    z-index: 11;
 }
-
-
 
 .sectionbox{
     display: flex;
@@ -425,8 +426,8 @@ html{
     background: none;
     border: none;
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     cursor: pointer;
     font-size: 16px;
     position: relative;
@@ -493,4 +494,111 @@ html{
 }
 .content-container{
     margin: 20px;
+}
+
+#nameinput{
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+#emailinput{
+    margin-bottom: 50px;
+}
+
+.emailinput{
+    position: relative;
+    padding-left:15px ;
+    padding-right: 10px;
+    background-color: #ededed;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+
+}
+
+
+
+.emailinput:hover{
+    background-color: #d6d6d6;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#emailForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputlabel{
+    position: absolute;
+    top: 50%; /* 將子元素的頂部移到容器高度的 50% 處 */
+    left: 20px;
+    transform: translateY(-50%);
+    transition: font-size 0.15s ease-in-out, top 0.15s ease-in-out, left 0.15s ease-in-out, color 0.15s ease-in-out ;
+    z-index: 0;
+}
+
+.inputlabel.active{
+    color: #0564d0;
+    font-size: 12px;
+    position: absolute;
+    top: 20px; /* 將子元素的頂部移到容器高度的 50% 處 */
+    left: 15px;
+    transform: translateY(-50%);
+    transition: font-size 0.15s ease-in-out, top 0.15s ease-in-out, left 0.15s ease-in-out, color 0.15s ease-in-out ;
+}
+
+
+
+.input{
+    padding-top: 25px;
+    height: 25px;
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 10px;
+    height: 60px;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+
+.input:focus{
+    border: 0px;
+    border-radius: 0px;
+    outline: none;
+}
+
+.line{
+    position: absolute;
+    left: 0px;
+    z-index: 4;
+    width: 0px;
+    transition: width 0.2s ease-in-out;
+    border: 0px;
+    margin: 0px;
+}
+
+.line.active{
+    width: 100%;
+    transition: width 0.2s ease-in-out;
+    border: 1px solid #0564d0;
+}
+
+.savebtn{
+    border: 0px;
+    background-color: #000000;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 4;
+    bottom: 15px;
+    right: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    font-size: 16px;
+    font-family: PingFangTC-Medium;
+}
+
+.savebtn:hover{
+    background-color: #000000d0;
 }
