@@ -266,21 +266,15 @@ html{
 #button5.fadein{
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
 }
 
 #button5.hidden{
     display: none;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
 }
 
-#button5.active{
+#button5{
     position: fixed;
     right: 25px;
     bottom: 25px;
@@ -290,12 +284,15 @@ html{
     border-radius: 100px;
     padding: 10px;
     z-index: 4;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
+}
+
+#button5.active{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
 }
 
