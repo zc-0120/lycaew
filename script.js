@@ -45,10 +45,10 @@ function changemenu_open_or_close() {
     const body = document.querySelector('body')
 
     if (element.classList.contains('list-mobile-div-hidden-b')) {
-        classname.classList.remove('navbox-close-menu-b');
+        classname.classList.remove('close-menu');
         element.classList.remove('list-mobile-div-hidden-b');
         element.classList.add('list-mobile-div-show-b');
-        classname.classList.add('navbox-open-menu-b');
+        classname.classList.add('open-menu');
         igbutton.classList.remove('igbutton-show')
         igbutton.classList.add('igbutton-hidden')
         setTimeout(function(){
@@ -63,9 +63,11 @@ function changemenu_open_or_close() {
         element2.classList.add('nav-mobile-ul-hidden');
         setTimeout(function(){
             element.classList.remove('list-mobile-div-show-b');
-            classname.classList.remove('navbox-open-menu-b');
-            element.classList.add('list-mobile-div-hidden-b');
-            classname.classList.add('navbox-close-menu-b');    
+            classname.classList.remove('open-menu');
+            element.classList.add('list-mobile-div-hidden-b');  
+        },200)
+        setTimeout(function(){
+            classname.classList.add('close-menu');    
         },200)
         igbutton.classList.remove('igbutton-hidden')
         igbutton.classList.add('igbutton-show')

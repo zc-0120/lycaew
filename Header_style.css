@@ -241,33 +241,34 @@ body.overflow{
 }
 
 /* 導覽列 */
-.navbox-close-menu-b{
+.navbox-normal{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.close-menu{
     background-color: transparent;
     height: 50px;
     transition: height 0.3s ease-in-out;
     z-index: 5;
-    transition: background-color 0.2s ease-in-out;
-    margin: 0px;
+    transition: background-color 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
-.navbox-close-menu-b.active{
+.close-menu.active{
     background-color: rgba(255, 255, 255, 0.8);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    
     transition: background-color 0.2s ease-in-out;
 }
 
-.navbox-open-menu-b{
+.open-menu{
     background-color: rgba(255, 255, 255, 0.8);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     height: 100vh;
     transition: height 0.3s ease, background-color 0.2s ease-in-out;
     opacity: 1;
     overflow: hidden;
     z-index: 5;
 }
-.navbox-fadeout-menu-b{
+.fadeout-menu-b{
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
