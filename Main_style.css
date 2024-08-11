@@ -86,7 +86,6 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    justify-content: center;
 }
 
 #main_section-1 video{
@@ -105,6 +104,8 @@
     justify-items: center;
     justify-content: center;
     align-items: center;
+    margin-top: 20vh;
+    
 }
 
 .text-welcome-div{
