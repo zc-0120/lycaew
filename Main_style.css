@@ -302,13 +302,14 @@
 
 .feature-box{
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    justify-content:space-between;
     justify-items: center;
     flex-direction: row;
-    width: 100%;
     margin-top: 25px;
-    margin: 15px;
     margin-bottom: 50px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
 }
 
 .feature-text{
@@ -316,79 +317,80 @@
     flex-direction: column;
     justify-content: center;
     justify-items: center;
-    align-items:baseline;
-    margin-right: 15px;
+    margin: 20px;
 }
 
 .feature-text h1{
-    font-size: 60px;
     margin: 0px;
     margin-bottom: 5px;
     font-family: IBMPlexMono-Medium;
 }
 
+.feature-text p{
+    color: #838282;
+}
+
 .feather-button{
     background-color: #ffffff;
-    padding: 15px;
-    padding-left: 0px;
+    padding: 10px;
+    padding-left: 20px;
     padding-right: 20px;
     display: flex;
-    justify-items: center;
     border: 0px;
     font-size: 18px;
     justify-content: center;
+    justify-items: center;
     align-items: center;
+    border-radius: 100px;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 5px;
 }
 
 .feather-button-a{
-    margin-right: 10px;
-    transition: margin-right 0.3s ease-in-out;
     font-family: PingFangTC-Semibold;
+    font-size: 16px;
 }
 
-.feather-button:hover a{
-    color: rgb(98, 98, 98);
-    margin-right: 20px;
-    transition: margin-right 0.3s ease-in-out, color 0.3s ease-in-out;
-}
 
-.feather-button svg{
-    color: black;
-    transition: color 0.3s ease-in-out;
-}
 
-.feather-button:hover svg{
-    color: rgb(98, 98, 98);
-    transition: color 0.3s ease-in-out;
+.feather-button:hover{
+    background-color: #cccaca;
+    transition: background-color 0.2s ease-in-out;
 }
-
 
 /* Feature Box的調整 */
 @media (min-width:100px) {
     .feature-image{
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
     }
 
     .feature-box{
         flex-direction: column;
+        margin: 15px;
     }
 
     #feature-text2{
         order: 2;
     }
     
-    #image2{
-        order: 1;
+    #image2 img{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     #feature-text1{
         order: 2;
     }
-    
-    #image1{
+
+    #image1 {
         order: 1;
+    }
+    
+    #image1 img{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     .imagebox{
@@ -396,7 +398,7 @@
         justify-content: center;
     }
     .feature-text h1{
-        font-size: 30px;
+        font-size: 25px;
         margin-top: 10px;
     }
 
@@ -405,6 +407,13 @@
         margin-top: 10px;
         margin-bottom: 10px;
         padding-right: 0px;
+    }
+
+    .feature-text{
+        align-items:center;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
     }
 }
 
@@ -418,44 +427,74 @@
 
     .feature-box{
         flex-direction: row;
+        margin: 20px;
     }
 
     #feature-text1{
         order: 1;
     }
-    
-    #image1{
+
+    #image1 {
         order: 2;
+    }
+    
+    #image1 img{
+        border-radius: 0px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    #image2 img{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
     }
 
     .feature-text h1{
-        font-size: 60px;
+        font-size: 35px;
     }
 
     .feature-text p{
-        font-size: 22px;
+        font-size: 18px;
         margin-top: 10px;
         margin-bottom: 10px;
-        padding-right: 20px;
+        
+    }
+
+    .feature-text{
+        align-items:baseline;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: left;
     }
     
 }
 
 @media (min-width:1000px) {
     .feature-image{
-        width: 500px;
-        height: 500px;
+        width: 450px;
+        height: 450px;
         transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    }
+
+    .feature-box{
+        margin: 30px;
     }
 
 }
 
 @media (min-width:1200px) {
     .feature-image{
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
         transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
     }
+
+    .feature-box{
+        margin: 100px;
+        margin-top: 15px;
+    }
+
 }
 
 /* Footer */
